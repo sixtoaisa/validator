@@ -29,18 +29,18 @@ namespace Validator
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnProcesar = new System.Windows.Forms.Button();
+            this.txtfhasta = new System.Windows.Forms.DateTimePicker();
             this.txtEmpresa = new System.Windows.Forms.ComboBox();
             this.txtfdesde = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.txtfhasta = new System.Windows.Forms.DateTimePicker();
             this.dataGrid = new System.Windows.Forms.DataGridView();
-            this.btnProcesar = new System.Windows.Forms.Button();
             this.doc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +50,7 @@ namespace Validator
             this.xml = new System.Windows.Forms.DataGridViewButtonColumn();
             this.respuesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enviarsunat = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +69,28 @@ namespace Validator
             this.groupBox1.Size = new System.Drawing.Size(960, 59);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
+            // 
+            // btnProcesar
+            // 
+            this.btnProcesar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnProcesar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProcesar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcesar.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.btnProcesar.Location = new System.Drawing.Point(842, 19);
+            this.btnProcesar.Name = "btnProcesar";
+            this.btnProcesar.Size = new System.Drawing.Size(112, 30);
+            this.btnProcesar.TabIndex = 23;
+            this.btnProcesar.Text = "Procesar";
+            this.btnProcesar.UseVisualStyleBackColor = false;
+            this.btnProcesar.Click += new System.EventHandler(this.btnProcesar_Click);
+            // 
+            // txtfhasta
+            // 
+            this.txtfhasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtfhasta.Location = new System.Drawing.Point(663, 24);
+            this.txtfhasta.Name = "txtfhasta";
+            this.txtfhasta.Size = new System.Drawing.Size(92, 20);
+            this.txtfhasta.TabIndex = 22;
             // 
             // txtEmpresa
             // 
@@ -131,14 +154,6 @@ namespace Validator
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // txtfhasta
-            // 
-            this.txtfhasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtfhasta.Location = new System.Drawing.Point(663, 24);
-            this.txtfhasta.Name = "txtfhasta";
-            this.txtfhasta.Size = new System.Drawing.Size(92, 20);
-            this.txtfhasta.TabIndex = 22;
-            // 
             // dataGrid
             // 
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -158,20 +173,6 @@ namespace Validator
             this.dataGrid.Size = new System.Drawing.Size(960, 306);
             this.dataGrid.TabIndex = 21;
             this.dataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentClick);
-            // 
-            // btnProcesar
-            // 
-            this.btnProcesar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnProcesar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProcesar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProcesar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnProcesar.Location = new System.Drawing.Point(842, 19);
-            this.btnProcesar.Name = "btnProcesar";
-            this.btnProcesar.Size = new System.Drawing.Size(112, 30);
-            this.btnProcesar.TabIndex = 23;
-            this.btnProcesar.Text = "Procesar";
-            this.btnProcesar.UseVisualStyleBackColor = false;
-            this.btnProcesar.Click += new System.EventHandler(this.btnProcesar_Click);
             // 
             // doc
             // 
@@ -209,8 +210,8 @@ namespace Validator
             // 
             // importe
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.importe.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.importe.DefaultCellStyle = dataGridViewCellStyle1;
             this.importe.HeaderText = "Importe";
             this.importe.Name = "importe";
             this.importe.ReadOnly = true;
@@ -225,8 +226,8 @@ namespace Validator
             // 
             // respuesta
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.respuesta.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.respuesta.DefaultCellStyle = dataGridViewCellStyle2;
             this.respuesta.HeaderText = "Respuesta";
             this.respuesta.Name = "respuesta";
             this.respuesta.ReadOnly = true;
@@ -239,12 +240,25 @@ namespace Validator
             this.enviarsunat.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.enviarsunat.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Location = new System.Drawing.Point(777, 389);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(89, 30);
+            this.btnLimpiar.TabIndex = 22;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // FrmValidarDocumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSalir);
@@ -280,5 +294,6 @@ namespace Validator
         private System.Windows.Forms.DataGridViewButtonColumn xml;
         private System.Windows.Forms.DataGridViewTextBoxColumn respuesta;
         private System.Windows.Forms.DataGridViewButtonColumn enviarsunat;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

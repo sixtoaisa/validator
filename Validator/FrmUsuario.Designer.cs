@@ -30,6 +30,12 @@ namespace Validator
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtEmpresa = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtConfirmarPassword = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtRol = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,12 +45,6 @@ namespace Validator
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.txtRol = new System.Windows.Forms.ComboBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtConfirmarPassword = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtEmpresa = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,66 @@ namespace Validator
             this.groupBox1.Size = new System.Drawing.Size(387, 267);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
+            // 
+            // txtEmpresa
+            // 
+            this.txtEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtEmpresa.FormattingEnabled = true;
+            this.txtEmpresa.Items.AddRange(new object[] {
+            "EMPRESA 01",
+            "EMPRESA 02"});
+            this.txtEmpresa.Location = new System.Drawing.Point(22, 87);
+            this.txtEmpresa.Name = "txtEmpresa";
+            this.txtEmpresa.Size = new System.Drawing.Size(345, 21);
+            this.txtEmpresa.TabIndex = 28;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(19, 62);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 17);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "Empresa:";
+            // 
+            // txtConfirmarPassword
+            // 
+            this.txtConfirmarPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmarPassword.Location = new System.Drawing.Point(203, 237);
+            this.txtConfirmarPassword.Name = "txtConfirmarPassword";
+            this.txtConfirmarPassword.Size = new System.Drawing.Size(164, 25);
+            this.txtConfirmarPassword.TabIndex = 26;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(200, 217);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(129, 17);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Confirmar Password:";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(22, 237);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(164, 25);
+            this.txtPassword.TabIndex = 24;
+            // 
+            // txtRol
+            // 
+            this.txtRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtRol.FormattingEnabled = true;
+            this.txtRol.Items.AddRange(new object[] {
+            "ADMINISTRADOR",
+            "USUARIO"});
+            this.txtRol.Location = new System.Drawing.Point(22, 136);
+            this.txtRol.Name = "txtRol";
+            this.txtRol.Size = new System.Drawing.Size(345, 21);
+            this.txtRol.TabIndex = 23;
             // 
             // label5
             // 
@@ -160,66 +220,6 @@ namespace Validator
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
             // 
-            // txtRol
-            // 
-            this.txtRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtRol.FormattingEnabled = true;
-            this.txtRol.Items.AddRange(new object[] {
-            "ADMINISTRADOR",
-            "USUARIO"});
-            this.txtRol.Location = new System.Drawing.Point(22, 136);
-            this.txtRol.Name = "txtRol";
-            this.txtRol.Size = new System.Drawing.Size(345, 21);
-            this.txtRol.TabIndex = 23;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(22, 237);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(164, 25);
-            this.txtPassword.TabIndex = 24;
-            // 
-            // txtConfirmarPassword
-            // 
-            this.txtConfirmarPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmarPassword.Location = new System.Drawing.Point(203, 237);
-            this.txtConfirmarPassword.Name = "txtConfirmarPassword";
-            this.txtConfirmarPassword.Size = new System.Drawing.Size(164, 25);
-            this.txtConfirmarPassword.TabIndex = 26;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(200, 217);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(129, 17);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "Confirmar Password:";
-            // 
-            // txtEmpresa
-            // 
-            this.txtEmpresa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtEmpresa.FormattingEnabled = true;
-            this.txtEmpresa.Items.AddRange(new object[] {
-            "ADMINISTRADOR",
-            "USUARIO"});
-            this.txtEmpresa.Location = new System.Drawing.Point(22, 87);
-            this.txtEmpresa.Name = "txtEmpresa";
-            this.txtEmpresa.Size = new System.Drawing.Size(345, 21);
-            this.txtEmpresa.TabIndex = 28;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 62);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 17);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "Empresa:";
-            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +230,7 @@ namespace Validator
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnNuevo);
             this.Name = "FrmUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuario";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
