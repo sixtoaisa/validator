@@ -32,7 +32,8 @@ namespace Validator
             }
             else
             {
-                MessageBox.Show("Usuario o Clave incorrecta");
+                MessageBox.Show("Usuario o Clave incorrecta", "Mensaje del sistema", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtUsuario.Focus();
             }
 
@@ -48,6 +49,9 @@ namespace Validator
             return retorno;
         }
 
-
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

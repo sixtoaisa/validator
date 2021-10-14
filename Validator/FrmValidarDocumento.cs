@@ -84,10 +84,12 @@ namespace Validator
             switch (e.ColumnIndex)
             {
                 case 6://XML
-                    MessageBox.Show("Se descarga archivo XML");
+                    MessageBox.Show("Se descarga archivo XML", "Mensaje del sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
                 case 8://ENVIAR SUNAT
-                    MessageBox.Show("Se envio documento a SUNAT");
+                    MessageBox.Show("Se envio documento a SUNAT", "Mensaje del sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
             }
         }
